@@ -1,0 +1,23 @@
+body
+{
+    font-family: monospace;
+}
+
+button
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.card
+{
+    color: green;
+    padding: 20px;
+}
+
+.card p
+{
+    padding: inherit;  /*pour prendre l'héritage de son parent*/
+    color: initial; /* prend la couleur de base, pas celle hérité*/
+
+}

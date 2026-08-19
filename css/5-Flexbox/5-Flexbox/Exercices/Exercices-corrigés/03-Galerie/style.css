@@ -1,0 +1,43 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 140px 0;
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* baisse à partir de ~~950px */
+  gap: 2vmin;
+  padding: 0 14px;
+}
+.gallery::after {
+  content:'';
+  display:block;
+  flex-grow: 10;
+}
+.gallery li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
+}
+.gallery img {
+  /* Se partage l'espace restant en le rajoutant à chaque image de chaque rangée */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 600px) {
+  /* pour le petit décalage qui appairait */
+  .galery li{
+    height: 25vh;
+  }
+}

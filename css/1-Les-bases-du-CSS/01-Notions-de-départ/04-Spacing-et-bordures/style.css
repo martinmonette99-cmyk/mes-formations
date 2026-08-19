@@ -1,0 +1,58 @@
+ p {
+  font-size: 45px;
+
+ /*  margin  */
+  margin: 20px 20px 20px 20px;  /* margin: 1-haut 2-droite 3-bas 4-gauche; */
+  margin: 20px 20px;  /* 1-haut et bas 2-droite et gauche */
+  margin: 20px; /* 1-haut droite bas gauche */
+  margin: 20px 20px 20px; /* 1-haut 2-gauche et droite 3-bas */
+
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  /* padding */ 
+  /* même syntaxe que margin */ 
+
+
+  /* border  */
+
+  background-color: coral;
+
+  border-width: 5px;  /* la largeur */
+  border-style: solid;
+  border-color: blue;
+
+  /* l'équivalent en 1 ligne de commande */
+  border: 5px solid blue;
+
+
+  /* border-radius */
+  border-radius: 5px;
+  
+  border-radius: 5px 10px 15px 20px ;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 20px;
+
+
+
+
+
+}
+
+
+
+span {
+  background: green;
+  font-size: 50px;
+  
+  /* Le padding top et bottom des éléments inline ne poussent pas 
+     les autres éléments inline ou block. */
+
+
+  /* Margin top et bottom ne fonctionne pas avec les éléments inline */
+}

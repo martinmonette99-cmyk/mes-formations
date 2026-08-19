@@ -1,0 +1,23 @@
+.box
+{
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 auto;
+    /* x, y, flou, spread, inset(à l'interieur), couleur(rgba) */
+    box-shadow: 0 7px 10px 20px inset rgba(0, 0, 0, 0.3) ;   
+}
+
+h1
+{
+    font-size: 50px;
+    color: #f1f1f1;
+    text-shadow: 0 1px 1px rgba(0,0,0,1);
+    text-shadow: 0 2px 1px rgba(0,0,0,1);
+    text-shadow: 0 3px 1px rgba(0,0,0,1);
+}
+
+input:focus
+{
+    outline:2px solid red;
+}

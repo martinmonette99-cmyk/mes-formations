@@ -1,0 +1,78 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+
+.flex-container {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 400px;
+  background: wheat;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+
+  /* justify-content : center, space-between, flex-end */
+  /*alignement sur l'axe principal */
+  justify-content: flex-start; 
+  justify-content: center; /* au centre */
+  justify-content: flex-end; /* à la fin */
+  
+  justify-content: space-between; /* met de l'espace entre les éléments mais pas au marges */
+  justify-content: space-evenly; /* met de l'espace entre les éléments aussi au marges */
+  justify-content: space-around; /*met le l'espace entre les éléments mais sans la fusion des marges */
+
+
+
+  /* align-items : center, flex-end, etc... */
+  /* alignement sur le cross-axe */
+  align-items: flex-start; /* au début. par défaut */
+  align-items: center; /* au centre */
+  align-items: flex-end; /* à la fin */
+
+  /*Ne fonctionne pas avec le cross-axe*/
+  /*justify-content: space-between;  
+    justify-content: space-evenly; 
+    justify-content: space-around;*/ 
+
+
+  flex-direction: column; 
+  flex-direction: row; /* en rangée. par defaut */
+  flex-direction: row-reverse; /* en rangée mais inversé. par defaut */
+  flex-direction: column; /* en colone */
+
+  
+  /* flex-wrap: wrap, nowrap */
+  flex-wrap: wrap;  /* éléments qui dépasse retour à la ligne */
+
+  /* flex-flow: column wrap; */
+/* raccourci pour flex-direction et flex-wrap */ 
+
+
+  /* Gére l'écart entre les rangées/colonnes qui sont passées à la ligne */
+  /* align-content: flex-start, center, space-between  */
+  align-content: center; /* seulement si des éléments passe à la ligne */
+
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 35px;
+  color: #f1f1f1;
+  font-weight: bold;
+  
+  /* 1= fait entrer tout les éléments sur une ranger. 0= ne shrink pas et déborde.*/
+  flex-shrink: 1;   /* de base =1*/
+}

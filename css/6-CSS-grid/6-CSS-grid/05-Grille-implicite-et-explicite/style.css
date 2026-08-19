@@ -1,0 +1,35 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 5px;
+  
+  /* va mettre les grilles créer automatiquement en rows=250px */
+  /*grid-auto-rows: 250px;*/
+  
+  /* va mettre les grilles créer automatiquement en columns avec l'espace restant*/
+  grid-auto-flow: column;
+  
+  /* va mettre les grilles créer automatiquement en columns=20px */
+  grid-auto-columns: 20px;
+}
+.item {
+  border: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background: royalblue;
+  font-weight: 900;
+  color: #f1f1f1;
+}

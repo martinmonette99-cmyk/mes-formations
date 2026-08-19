@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  padding-top: 200px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: orangered;
+
+  transition-property: transform;  /* propriété de transition appliqué à transform */
+  
+  transition-duration: 0.4s;  /* la durée de la transition est de 0.4s  */
+  
+  /* pour faire soi-même son cubic-bezier voir le site web https://cubic-bezier.com */
+  transition-timing-function: cubic-bezier(.01,.45,.6,.99);
+  /* transition-timing-function: ease;   avec ease, la transition est lente au début et à la fin */
+  /* transition-timing-function: linear;  avec linear, la transition est à la même vitesse */
+  /* transition-timing-function: ease-out;  avec ease-out, la transition est lente à la fin */ 
+
+  transition-delay: 1s; /* met 1s avant d'activer la transition */
+
+  /* propriété raccourci */
+  transition: transform 0.4s 0.5s ease-out; /* durée ensuite delai */ 
+
+
+
+
+}
+
+.box:hover{
+
+  transform: rotate(45deg);
+
+}
+

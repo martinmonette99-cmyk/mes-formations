@@ -1,0 +1,45 @@
+/******* la valeur pour les cellulaire commence à 320 px **********/
+
+
+h1
+{
+    /* Valeurs relative : vw */
+    font-size: 50px;
+    font-size: 5vw;
+    font-size: calc(2vw + 30px);  /* calc pour calcule */
+
+    /* clamp */ 
+    font-size: clamp(30px, 5vw, 50px); /* clamp(valeur min, valeur préféré, valeur max)*/
+
+    /* min */
+    font-size: min(5vw, 50px);
+    
+    
+    /* max */
+    font-size: max(5vw, 50px);
+}
+
+/******* Technique de l'escalier ********/
+@media (max-width: 99999px)
+{
+    h1 
+    {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    h1 
+    {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    h1 
+    {
+        font-size: 25px;
+    }
+}

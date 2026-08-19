@@ -1,0 +1,66 @@
+body {
+  background-color: #333;
+  color: cornsilk; /* hérite les enfant */
+  font-family: 'Times New Roman', Times, serif; /* pour faire hérité les enfants */ 
+}
+
+/* Titre */
+h1
+{
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 5px;   /* Espacement entre les lettres */ 
+  font-weight: 900;    /* Le gras (ne possede peut-etre pas tout les grades  */
+  
+  font-family: 'Times New Roman', Times, serif;  /* type de police */
+  /* peut hérité du parent */ 
+  /* pour voir quel font est actif = inspecter - computed (en bas) */
+
+
+}
+
+
+
+/* Lien */
+a
+{
+  color: #f1f1f1;  /* les lien n'hérite pas du parent */ 
+  text-decoration: underline; /* pour souligner - par défaut sur les lien */
+  text-decoration: underline dotted red;
+  text-decoration-thickness: 10px;  /* grandeur du soulignement */ 
+  cursor: pointer;  /* pointeur style main par défaut sur les lien */
+}
+
+
+
+/* Paragraphe */
+p{
+  font-size: 16px;  /* valeur de base paragraphe = 16px */
+  line-height: 1.2; /* hauteur de ligne par défaut  (1.2 = 120% de 16)*/
+  text-transform: uppercase; /* tout mettre en majuscule */ 
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+  
+/* Listes */
+ul
+{
+  list-style-type: circle;  /* le style du boulette */ 
+  /*list-style-type: "Allo";  /* le style du boulette */ 
+  list-style-image: url(./ressources/basketball.svg); /* prend une image pour boulette */
+  list-style-position: inside;  /* à l'intérieur du padding (par défaut) */ 
+
+}
+
+ul li
+{
+padding-left: 20px;  /* met un espace entre le mot et boulette*/
+}
+
+ol
+{
+  list-style-type: lower-roman;
+}
+

@@ -1,0 +1,40 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img
+{
+  width: 400px; /* change la longeur mais garde le ratio si seulement width */
+
+  width: 100%;  /* Conserve lhéritage de viewport */
+
+  max-width: 800px;
+}
+
+.img-height
+{
+  width: 200px;
+  height: 400px;  /* déforme l'image */
+  object-fit:cover;  /* crop l'image mais garde le ratio original*/
+  object-position: left;  /* place la vue de l'image à gauche
+  /*object-position: 20% 50%;  20% sur X 50% sur Y*/
+  transform: /*translate(-50%, -50%)*/ scale(1.0);  /* ajuster la grandeur interne */
+}
+
+.hero-section
+{
+  height: 100vh; /* vh= viewport hight */
+  background-color: coral;
+  
+  background-image: url(images/annie-spratt-YMCq1c7mBvY-unsplash.jpg);
+  /* s'adapte à la hauteur et la largeur du parent*/
+
+  background-position: center;  /* Lors du crop reste au centre */
+  background-position: 50% 50%;  /* Lors du crop reste au centre */
+  background-size: cover; /* garde le ratio original */  
+  background-repeat: no-repeat;
+
+
+}

@@ -1,0 +1,95 @@
+body {
+  background-color: coral;
+}
+
+/* Une règle CSS : */
+
+/* Sélecteur */ 
+h1{
+  /* Déclaration ou suite de déclaration*/
+  /* propriété : valeur ; */
+  color:blue;  
+  font-size: 45px;  
+  background: #000;
+}
+
+
+
+/* Différents sélecteurs sont disponibles */
+
+/* Les class */
+.title{
+  background-color: darkslategray;
+  color: cornsilk;
+}
+
+/* .container parent de p */
+.container p{
+  color:red;
+}
+
+.title.first-title{ /* Lorsqu'un élément possede la class "title" et "first-title" */
+  padding: 50px;
+}
+
+
+/*Les id */
+/* ils passent devant les class, peu importe l'ordre */
+
+#title-1{
+  background-color: crimson;
+}
+
+
+/* On évite les sélections trop longues */
+
+/* les deux sélecteur suivant font la même chose*/
+html body .container ul li{
+  font-size: 30px;
+}
+
+.list-item{
+  font-size: 30px;
+}
+
+
+
+/* On donne une classe au parent ou à l'enfant pour faciliter la sélection */
+
+/* .list li est parent et .list-item est enfant Donne la même chose*/
+.list li{
+  font-size: 30px;
+  }
+
+.list-item{
+  font-size: 30px;
+}  
+
+
+/* ou */
+
+
+/* Le sélecteur universel "*" sélectionne tout */
+
+*{
+  background-color: aquamarine;
+}
+
+
+
+/* On l'utilise souvent pour reset */
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* On peut aussi l'utiliser dans un élément */
+
+.container *{
+  background-color: chocolate;
+}

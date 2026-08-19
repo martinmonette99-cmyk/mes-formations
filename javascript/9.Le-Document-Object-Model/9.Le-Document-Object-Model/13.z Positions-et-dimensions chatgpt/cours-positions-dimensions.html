@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positions et dimensions en JavaScript</title>
+  <link rel="stylesheet" href="cours-positions-dimensions.css">
+</head>
+<body>
+  <header class="intro">
+    <h1>Positions et dimensions en JavaScript</h1>
+    <p>Ouvre aussi la console du navigateur avec <strong>F12</strong> pour voir les résultats.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Position et taille avec getBoundingClientRect()</h2>
+      <p>Cette boîte sert à observer sa position par rapport à la fenêtre visible.</p>
+
+      <div class="box">
+        Je suis la boîte utilisée avec <code>getBoundingClientRect()</code>.
+      </div>
+
+      <button id="btn-rect">Afficher sa position et sa taille</button>
+    </section>
+
+    <section>
+      <h2>2. Comparer scroll, client et offset</h2>
+      <p>Le contenu est volontairement plus grand que le conteneur afin de créer une barre de défilement interne.</p>
+
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, omnis. Voluptatibus, at.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, accusamus. Doloribus, quas.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dignissimos reprehenderit
+          aperiam, veniam suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consequuntur, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+          laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis eius
+          excepturi laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, itaque.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium molestiae vero corporis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere maxime assumenda.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur delectus expedita non.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta perferendis provident deserunt.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur sed optio.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quae laborum placeat.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-scroll-size">scrollWidth / scrollHeight</button>
+        <button id="btn-client-size">clientWidth / clientHeight</button>
+        <button id="btn-offset-size">offsetWidth / offsetHeight</button>
+        <button id="btn-scroll-top">scrollTop du conteneur</button>
+      </div>
+    </section>
+
+    <section class="page-scroll-section">
+      <h2>3. Défilement de la page</h2>
+      <p>Fais défiler toute la page, puis clique sur le bouton.</p>
+      <button id="btn-window-scroll">Afficher window.scrollY</button>
+    </section>
+
+    <section>
+      <h2>4. Position depuis le haut de la page</h2>
+      <p>On additionne le défilement de la page et la position visible de ce titre.</p>
+      <h3 class="target-title">Titre servant de cible</h3>
+      <button id="btn-page-position">Afficher sa position depuis le haut du document</button>
+    </section>
+
+    <section>
+      <h2>5. offsetLeft et offsetParent</h2>
+      <div class="parent-box">
+        <div class="child-box">Élément enfant</div>
+      </div>
+      <button id="btn-offset-left">Afficher offsetLeft et offsetParent</button>
+    </section>
+
+    <section class="results-section">
+      <h2>Résultats</h2>
+      <pre id="results">Clique sur un bouton pour afficher un résultat.</pre>
+    </section>
+  </main>
+
+  <script src="cours-positions-dimensions.js"></script>
+</body>
+</html>

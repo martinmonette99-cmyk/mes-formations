@@ -1,0 +1,72 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  height: 150px;
+  font-size: 45px;
+  margin-bottom: 20px;
+  background: crimson;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenu */
+.percentage
+{
+  width: 80%;
+}
+
+.pixels
+{
+  width: 600px;
+}
+
+.vw   /* Signifie viewport width */
+{
+  width: 50vw; 
+    /*width: 90vmin; vmin du côté le plus petit  largeur/hauteur*/ 
+  /*width: 90vmax; vmax du côté le plus grand largeur/hauteur*/
+}
+
+.vh  /* signifie viewport height */
+{
+  width: 50vh;
+}
+
+
+/* Texte */ 
+ p
+ {
+  color:#f1f1f1;
+  margin: 20px 0;
+ }
+
+ .pixel-txt
+ {
+  font-size: 50px;
+ }
+
+ .parent
+ {
+  font-size: 20px;
+ }
+
+ .child
+ {
+  font-size: 2em;  /* 2em est = à 2x la valeur de son parent (ici 2x20px = 40px)*/
+ }
+
+ .rem
+ {
+  font-size: 2rem;  /* élément racine est 16px, donc 2x16px. ne dépend pas du parent */
+ }

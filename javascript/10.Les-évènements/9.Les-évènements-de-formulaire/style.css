@@ -1,0 +1,58 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #2e335c;
+}
+
+/*
+border-radius: 32px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  30px 30px 60px #afafaf,
+             -30px -30px 60px #ffffff;
+*/
+
+
+
+
+form {
+  background: #f1f1f1; 
+  max-width: 500px;
+  margin: 100px auto 0;
+  border-radius: 25px;
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"], input[type="email"], textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3333339e;
+  font-size: 16px;
+}
+input[type="checkbox"]{
+  margin-bottom: 10px;
+  width: 20px;
+  height: 20px;
+}
+textarea {
+  min-height: 100px;
+}
+button {
+  padding: 10px;
+  font-size: 16px;
+  min-width: 175px;
+  background: #2e335c;
+  color: #f1f1f1;
+  border-radius: 5px;
+  border: none;
+}

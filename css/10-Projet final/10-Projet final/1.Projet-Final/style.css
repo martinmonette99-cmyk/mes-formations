@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --light-orange: #f2d0a9ff;
+  --almond: #f1e3d3ff;
+  --crimson: #dc143cff;
+
+  /* General */
+  --dark-base: #222;
+  --lighter-dark: #333;
+  --gray: #858585;
+  --light-gray: #d2d2d2;
+  --light-white: #f1f1f1;
+
+  /* Active */
+  --active-almond: #feecd7;
+  --active-light-white: #dedede;
+  --active-crimson: #c51337;
+
+  /* Fonts */
+  --base-font: Raleway, sans-serif;
+  --accent-font: Nunito sans, sans-serif;
+
+  /* Font-size */
+
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-40: 2.5rem;
+  --fs-42: 2.625rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+
+  /* shadows */
+  --light-solid-shadow: 0 2px 0px #111111cc;
+  --solid-shadow: 0 2px 0px #111;
+  --shadow-sm: 0 2px 4px rgba(17, 17, 17, 0.502);
+  --drop-shadow: 1px 1px 0px #1111114d;
+
+  /* gradients */
+  --striped-pinky: repeating-linear-gradient(
+      135deg,
+      rgba(106, 100, 100, 0.1) 0px,
+      rgba(106, 100, 100, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to right, #f3cdcd, #f4e0bb);
+  --light-orange-pinky: linear-gradient(to left, #fcd4d4, #f8d9a0);
+  --dark-right : linear-gradient(to bottom right, #252525, #383838);
+  --dark-left : linear-gradient(to bottom left, #252525, #383838);
+  --radial-white-beige:  radial-gradient(#f1f1f1, #f5f5dc);
+
+
+  /* borders */
+  --light-dark-border: 1px solid var(--lighter-dark);
+  --dark-thick-border: 2px solid var(--lighter-dark);
+}

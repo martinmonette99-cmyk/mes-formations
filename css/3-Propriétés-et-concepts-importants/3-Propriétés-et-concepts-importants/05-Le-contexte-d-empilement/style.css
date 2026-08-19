@@ -1,0 +1,59 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+}
+
+
+
+/* 1. */
+.card {
+  width: 275px;
+  height: 275px;
+  position: absolute;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* z-index: 1 est surpassé par 2. 2 par 3 etc */
+
+/* un élément child ne peut passer sous son parent (qui serait défini avec relative)
+   transform et opacity definisse un contexte d'empilement alors child ne passe pas dessous */
+
+.c1 {
+  background-color: crimson;
+  top: 60px;
+  left: 60px;
+  z-index: 4;
+}
+.c2 {
+  background-color: lightblue;
+  top: 70px;
+  left: 70px;
+  z-index: 99;
+  
+}
+.c3 {
+  background-color: violet;
+  top: 80px;
+  left: 80px;
+}
+.c4 {
+  background-color: lightgreen;
+  top: 90px;
+  left: 90px;
+}
+.c5 {
+  background-color: orangered;
+  top: 100px;
+  left: 100px;
+}
+

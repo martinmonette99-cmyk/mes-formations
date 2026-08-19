@@ -1,0 +1,15 @@
+body {
+  background: #333;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+h1
+{
+  color: green;
+}
+
+h1   /* le dernier h1 sera pris en compte (cascade) */
+{
+  color: red;
+}

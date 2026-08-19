@@ -1,0 +1,118 @@
+/* Sélecteur universel et simple reset */
+
+/* * a une spécifité de 0  */
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Par type : p, h1, form */
+h1{
+  font-size: 135px;
+  color: salmon;
+}
+
+
+
+/* Par classe / id */
+.main-title{
+  color: rgb(51, 155, 51);
+}
+#title{
+  color: lightblue;
+}
+
+
+
+
+
+/* Combinaison */
+.title#title{
+  color: crimson;
+}
+
+.title.main-title{
+  color: blue;
+}
+
+
+
+
+/* Sélecteurs avancés +~> */
+
+h1 + ul /* = premier élément au même niveau qui suit le h1. */
+{
+  background-color: blue;
+}
+
+ul > li /* = Tout les li qui sont les premiers enfants de ul */
+{
+  background-color: violet;
+}
+
+li ~ li  /* Tout les élélments qui suivent le sélecteur */
+{
+  background-color: yellowgreen;
+}
+
+input[type=texte]   /* tout les inputs qui ont l'atribut type avec la valeur texte */
+{
+  background-color: red;
+}
+
+a[href$=".fr"]  /* tout les éléments href qui se termine par .fr */
+{
+  background-color: blue;
+}
+
+/* Les pseudo-classes de position */
+
+li:nth-child(2)  /* le second enfant de ce niveau */
+{
+  background-color: red;
+}
+
+li:nth-child(odd)  /* les impaires li de ce niveau */
+{
+  background-color: red;
+}
+
+li:nth-child(even)  /* les paires li de ce niveau */
+{
+  background-color: red;
+}
+
+li:nth-of-type(3) /* le troisième enfant seulement li de ce niveau */
+{
+  background-color: cadetblue;
+}
+
+
+
+/* :not() */
+
+li:not(:nth-of-type(3))
+{
+  background-color: chartreuse; /* tout les li mais pas le troisième */ 
+}
+
+li:not(.muted) /* tout les li sauf ceux qui ont la class .muted */
+{
+  background-color: aqua;
+}
+
+
+
+
+/* Petit rajout dont je ne parle pas dans la vidéo. */
+
+/* Assembler plusieurs sélections avec la virgule (,) */
+
+/* Ex : Tous les h1 ET tous les h2 ET tous les paragraphes. */
+
+h1, h2, p {
+  color: crimson;
+} 

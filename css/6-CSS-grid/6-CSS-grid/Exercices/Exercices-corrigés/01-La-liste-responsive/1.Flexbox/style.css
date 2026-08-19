@@ -1,0 +1,27 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  padding: 140px 0 100px;
+}
+
+.gallery {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.gallery li {
+  width: 250px;
+  list-style-type: none;
+}
+.gallery li img {
+  width: 100%;
+}

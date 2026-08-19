@@ -1,0 +1,54 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: orangered;
+  
+ /*  transform: translateX(50px); */
+  
+  /* Déplace de 50% de la largeur de l'élément */
+  transform: translateX(50%);
+  transform: translatey(50%); /* ici translatey écrase translatex */
+
+  transform: translate(50%, 50%); /* pour faire x et y en même temps */
+
+  /* pour agrandire l'élément */
+  transform: scale(2);  /* scale(1)=100%   scale(2)=200%  */
+
+  /* pour faire tourner l'élément */
+  transform: rotate(30deg);
+
+  /* faire tourner l'élément sur y (pivot au centre) en 3d */
+  transform: rotateY(45deg);
+  /* faire tourner l'élément sur x (pivot au centre) en 3d */
+  transform: rotatex(45deg);
+
+  /* faire tourner l'élément sur x avec distortion */
+  transform: skewX(45deg);
+  /* faire tourner l'élément sur y avec distortion */
+  transform: skewy(45deg);
+
+
+  /* Combinaison. l'ordre est importante car x et y peuvent changer */
+  transform: translateX(200px) rotate(45deg);
+
+
+  /* pour changer le pivot */
+  transform: rotate(120deg);
+  transform-origin: 50% 50%;  /* valeur par défaut */
+  
+  transform-origin: top left;  /* pivot en haut à gauche */
+  transform-origin: 0 0;       /* pivot en haut à gauche */
+  transform-origin: 100% 100%; /* pivot en bas à droite */
+  
+
+}

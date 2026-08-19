@@ -1,0 +1,78 @@
+/* Un pixel est un petit carré de votre écran renvoyant de la lumière. */
+/* Ses dimensions sont propres à la qualité et la densité de chaque écran. */
+
+body {
+  background: #333;
+}
+/* 
+  Un élément bloc prend l'entièreté de la largeur de son parent.
+  Sa valeur de base pour width est "auto" par défaut.
+*/
+
+/* responsive = les valeurs absolut empeche le responsive */
+
+.box {
+  background-color: rgb(187, 236, 9);
+  width: 50%;    /* 50% de son parent (body-html-viewport)*/
+  /* width auto et 100% ne sont pas équivalent
+  width auto = largeur total qui inclu margin-paddin
+  width 100% = largeur total + margin  (ex. 100% + 20px donc dépasse)*/
+  height: 100%;  /* Ne fonctionne pas car le body n'a pas de hauteur*/
+  /* pour que ça marche il faut faire un sélecteur supplémentaire
+
+  html, body {
+    height: 100%;
+  {          sert à hériter la hauteur du body      */
+}
+
+.box-2{
+  max-width: 800px; /* lorsqu'il passe en bas de 800px il passe à auto
+    donc pas de scroll bar*/
+  min-width: 700px;  /*En bas de 700px met une scroll bar*/
+  height: 200px;
+  background-color: crimson;
+
+  margin: 0 auto;  /* pour centrer le conteneur*/
+
+}
+
+
+.container {
+  width: 400px;
+  height: 400px;
+  background: rgb(12, 240, 4);
+}
+
+.child {
+  height: 50px;
+  background: green;
+}
+
+.p1 {
+  color: #f1f1f1;
+  font-size: 24px;
+  background-color: blue;
+  /* min-content = Largeur du contenu le plus grand (ici du mot le plus grand) */
+  width: min-content;
+}
+
+
+.p2 {
+  color: #f1f1f1;
+  font-size: 24px;
+  background-color: blue;
+  /* max-content = Longueur totale du contenu sans interuption. 
+  Ici la longueur totale de tous les mots. */
+  width: max-content; /* Si viewport plus petit met un scroll bar
+  et ne passe pas à la ligne. reste tel quel*/
+}
+
+.p3 {
+  color: #f1f1f1;
+  font-size: 24px;
+  background-color: blue;
+  /* fit-content = Utilise max-content si ça ne dépasse pas, 
+  sinon la largeur disponible, et au minimum min-content. */
+  width: fit-content; /* est responsive*/
+
+}

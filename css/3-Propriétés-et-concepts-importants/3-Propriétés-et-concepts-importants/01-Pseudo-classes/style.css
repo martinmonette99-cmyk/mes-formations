@@ -1,0 +1,45 @@
+body {
+  background: #222;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background: orange;
+}
+.card:hover   /* quand la souris passe sur l'élément*/
+{
+  background-color: chocolate;
+  height: 350px;
+}
+.card:active   /* quand la souris est clic sur l'élément. déclic = non active */
+{
+  background-color: aqua;
+}
+
+
+input {
+  width: 50px;
+  height: 50px;
+}
+input:checked    /* lorsque input est coché */
+{
+  accent-color: red;  /* code qui fonctionne avec input */
+}
+
+
+button {
+  padding: 10px 14px;
+  font-size: 20px;
+}
+button:focus   /* clic et le bouton devient actif */
+{
+  background-color: darkorange;
+}
+
+a:visited
+{
+  color: chartreuse;
+  text-decoration-color: aqua;
+}
+

@@ -1,0 +1,35 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+.grid {
+  display: grid;
+  
+  /* fr= fractional unit. prend le restant et le fractionne */ 
+  grid-template-columns: 200px 200px 1fr;
+  grid-template-rows: 200px 200px;
+  
+  /* racourcis */
+  /* grid-template: 200px 200px / 200px 200px 1fr; */
+  
+  /* répete 2x 200px rows / répete 2x 200px columns */
+  /* grid-template: repeat(2, 200px) / repeat(2, 200px) */
+  
+  grid-gap: 5px;
+}
+.item {
+  border: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background: royalblue;
+  font-weight: 900;
+  color: #f1f1f1;
+}

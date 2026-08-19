@@ -1,0 +1,110 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* ANIM 1 MARQUEE */
+
+.marquee-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #25284c;
+}
+
+.marquee {
+  font-size: 100px;
+  line-height: 1.3;
+  font-family: sans-serif;
+  padding: 24px 0;
+  color: #fff;
+  white-space: nowrap;
+  animation : marquee 30.5s infinite linear;
+}
+.marquee::after {
+  content: "LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME - ";
+  background: red;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ANIM 2 BTN */
+
+/* body {
+  padding-top: 100px;
+} */
+
+
+/* .btn-marquee {
+  font-family: Oswald;
+  background: crimson;
+  color: #f1f1f1;
+  padding: 20px 45px;
+  font-size: 40px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.marquee {
+  position: absolute;
+  z-index: 10;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.marquee span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-marquee:hover .base-txt {
+  opacity: 0;
+}
+.btn-marquee:hover .marquee {
+  animation: infiniteSpin 1s linear infinite;
+}
+
+@keyframes infiniteSpin {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.btn-marquee:hover .marquee span {
+  font-style: italic;
+}
+
+ */
+
+
+
+
+
+
+
+
+
+

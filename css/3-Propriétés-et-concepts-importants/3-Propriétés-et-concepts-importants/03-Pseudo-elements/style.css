@@ -1,0 +1,48 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h1::before
+{
+  display:block; 
+  content: "hello world";
+  background-color: brown;
+  height: 100px;
+}
+
+h1::after
+{
+  display:block; 
+  content: "";
+  background-color: brown;
+  height: 100px;
+}
+
+p::first-line
+{
+  background-color: aquamarine;
+}
+
+p::first-letter
+{
+  font-size: 45px;
+}
+
+p::selection  /* Pour changer la couleur de sélection du texte*/
+{
+  background-color:violet;
+}
+
+
+
+
+
+
+
+

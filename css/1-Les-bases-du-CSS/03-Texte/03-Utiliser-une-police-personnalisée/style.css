@@ -1,0 +1,11 @@
+@font-face
+{
+    font-family: "Bradshaw" ;
+    src:url("./font/Bradshaw.otf")
+}
+
+h1
+{
+    font-family: Bradshaw;
+    font-size: 70px;
+}

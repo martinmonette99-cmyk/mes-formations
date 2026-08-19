@@ -1,0 +1,34 @@
+/* 1. Opacity */
+/* Reste dans le flux du document, change seulement le niveau d'opacité. */
+/* Ne cache pas l'élément aux screen readers */
+
+
+.opacity-text {
+  background: green;
+  opacity: 0;
+}
+
+
+/* 2. Visibility */
+
+/* Rend l'élément invisible mais laisse la taille de ce dernier dans le flux. */
+/* Ne peut plus être manipulé par l'utilisateur. */
+/* Cache l'élément aux screen readers. */
+
+
+.visibility-text {
+  visibility: hidden;
+}
+
+
+/* 3. Display */
+
+/* Fais disparaître l'élément et sa taille. */
+/* Ne peut plus être manipulé par l'utilisateur. */
+/* Cache l'élément aux screen readers. */
+
+.display-text {
+  display: none;
+}
+
+

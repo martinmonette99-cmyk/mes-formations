@@ -1,0 +1,48 @@
+body {
+  background: #222;
+}
+
+/* 5. le !important */
+h1
+{
+  color: chartreuse!important;
+}
+
+
+/* après !important c'est html style="color: white; la spécifité la plus forte */ 
+
+/* 4. On peut enchaîner des sélecteurs, augmentant ainsi leur force */
+/* force : 1 1 1 */
+body .title#title-1
+{
+  color: goldenrod;
+}
+
+
+
+/* 3. Sélecteur d'ID : force 3*/
+#title-1
+{
+  color: lightblue;
+}
+
+
+
+
+/* 2. Sélecteur de classe : force 2 */
+.title
+{
+  color: green;
+}
+
+
+
+/* 1. Sélecteur d'élément : force 1 (force le plus faible)*/
+
+h1
+{
+  font-size: 45px;
+  text-align: center;
+  color: crimson;
+}
+

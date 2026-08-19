@@ -1,0 +1,141 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+}
+
+button{
+  margin: 40px;
+}
+
+
+/******************************************** premier animation ***********************************/
+.btn-slide-up{
+  padding: 30px 45px;
+  font-size: 50px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 3px solid #111;
+  color: #f1f1f1;
+  transition: color 0.4s ease-out; 
+}
+
+.btn-slide-up::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn-slide-up:hover::after{
+  transform: translate(100%, -100%);
+}
+
+.btn-slide-up:hover{
+  color: #000;
+}
+
+
+/******************************************** second animation ***********************************/
+.focus-anim{
+  padding: 30px 45px;
+  font-size: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #f1f1f1;
+}
+
+.focus-anim::before,
+.focus-anim::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.focus-anim::before{
+  border: 2px solid #111;
+  
+}
+
+.focus-anim::after{
+  background-color: #111;
+  z-index: -1;
+}
+
+.focus-anim:hover::before{
+  transform: scaleX(1.05) scaleY(1.1);
+}
+
+.focus-anim:hover::after{
+  transform: scaleX(0.95) scaleY(0.9);
+}
+
+/* pour remplacer le outline du focus */
+.focus-anim:focus::before{
+  transform: scaleX(1.05) scaleY(1.1);
+}
+/* pour remplacer le outline du focus */
+.focus-anim:focus::after{
+  transform: scaleX(0.95) scaleY(0.9);
+}
+
+
+/******************************************** troisième animation ***********************************/
+
+.underlined-link{
+
+  font-size: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  position: relative;
+}
+
+.underlined-link::after{
+  content: "";
+  display: block; /* élément <a> en inline pae défaut */
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: #111;
+  transform: scaleX(0.25);
+  transition: transform 0.4s ease-out;
+
+}
+
+.underlined-link:hover::after{
+
+  transform: scaleX(1);
+}
+
+
+
+

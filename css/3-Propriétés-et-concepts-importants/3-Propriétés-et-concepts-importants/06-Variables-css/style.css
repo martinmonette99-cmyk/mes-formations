@@ -1,0 +1,25 @@
+:root{   /* priorité moin grande que html {  }*/  
+
+    --primary-color: coral;
+    --text-color: #222;
+}
+
+body
+{
+    background-color: var(--primary-color);
+}
+
+h1
+{
+   color: var(--text-color); 
+}
+
+.about  /* va prendre --primary-color: blue pour cette section uniquement */
+{
+    --primary-color: blue;
+}
+
+.about p
+{
+    background-color: var(--primary-color);
+}

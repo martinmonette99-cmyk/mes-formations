@@ -1,0 +1,48 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.green-box {
+  background: green;
+  float: left;
+}
+.red-box {
+  background: crimson;
+  position: relative;
+}
+.yellow-box {
+  background: gold;
+  position: fixed;
+  top: 0;
+  z-index: 25;
+}
+.blue-box {
+  background: blue;
+  position: absolute;
+  top: 0;
+}
+.orange-box {
+  background: orange;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+
+
+
+
+
+

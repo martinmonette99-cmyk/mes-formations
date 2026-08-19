@@ -1,0 +1,46 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  
+  /* grille nommé */
+  /*grid-template-rows: [header-start] 200px [header-end content-start] 200px 
+  [content-end footer-start] 200px [footer-end];*/
+  grid-template-rows: repeat(3, 200px);
+  
+  /* air nommé */
+  grid-template-areas:
+  "header header header"
+  "left-side content right-side"
+  "footer footer footer"
+  ;
+  grid-gap: 5px;
+}
+.item {
+  border: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background: royalblue;
+  font-weight: 900;
+  color: #f1f1f1;
+}
+
+.item-1
+{
+  /* Avec ligne nommées
+  /*grid-area: header-start / 1 / header-end / -1;*/
+
+  /* avec air nommée */
+  grid-area: header ;
+}
