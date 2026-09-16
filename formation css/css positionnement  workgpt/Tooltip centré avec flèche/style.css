@@ -1,0 +1,56 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.tooltip {
+    margin: 100px;
+    position: relative;
+
+    width: fit-content;
+    white-space: nowrap; /* pas de return entre les mots */
+}
+
+.tooltip-button {
+    font-size: 24px;
+    padding: 10px 15px;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 8px 12px;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none; /*cet élément ne doit pas intercepter les événements de la souris. sinon le texte caché fait apparaitre le texte à son survol */
+    transition: opacity 0.3s; /*l'opacité s'applique au rendu de l'élément entier, incluant son contenu et ses descendants, donc à ::after aussi */ 
+}
+
+
+
+
+
+.tooltip-text::after {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+background-color: #222;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip:hover .tooltip-text {
+    opacity: 1;
+}

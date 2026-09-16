@@ -1,0 +1,26 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.hero {
+    padding: 80px 20px;
+    background-color: #ddd;
+}
+
+.navbar {
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 1px solid #999;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.content {
+    height: 1500px;
+    padding: 20px;
+}
+

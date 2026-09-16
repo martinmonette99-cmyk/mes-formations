@@ -1,0 +1,45 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown.active .dropdown-menu{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.dropdown-menu { /* la largeur (width) en absolute est égale au contenu */
+    display: none;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px;
+    border: 1px solid #999;
+    z-index: 10;
+}
+
+.dropdown-button {
+
+    background-color: transparent;
+    border: 0;
+
+}

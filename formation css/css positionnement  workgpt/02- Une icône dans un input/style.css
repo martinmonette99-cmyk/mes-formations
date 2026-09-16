@@ -1,0 +1,23 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.search {
+    width: 300px;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search input {
+    width: 100%;
+    padding: 25px 10px;
+    padding-left: 25px;
+}

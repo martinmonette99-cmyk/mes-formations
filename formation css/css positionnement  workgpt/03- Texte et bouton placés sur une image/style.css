@@ -1,0 +1,39 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.image-card {
+    width: 400px;
+    position: relative;
+}
+
+.image-card img {
+    width: 100%;
+    display: block;
+
+    position: relative; /* pour pouvoir utiliser z-index */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(1, 68, 253, 0.35);
+    z-index: 2;
+}
+
+.image-content {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: yellow;
+    z-index: 3;
+}
+
