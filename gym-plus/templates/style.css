@@ -1,0 +1,306 @@
+
+/************ global *********************************************/
+/*   @media (max-width: 1050px) */
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-standard{
+    width: fit-content;
+    padding: 10px 20px;
+   
+    border-radius: 10px;
+    
+    background-color: #544f8e;
+    color: beige;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cache{
+    display: none;
+}
+
+
+/*** header *******************************************/
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #E3C932;
+}
+
+.container-logo-text-nav{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+
+
+    position: relative;
+
+
+    
+}
+
+
+
+.logo{
+    height: 90%;
+    width: auto;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+@media (max-width: 700px){
+    .logo{
+        height: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.header-h5{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+@media (max-width: 700px){
+   .header-h5{
+    /* right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; */
+    display: none;
+   } 
+}
+
+/********* hero section  **************************************/
+
+.index-hero{
+    background-image: url(/image/img-gym-bg-index.png);
+    width: 100%;
+    height: 700px;
+    display: flow-root;
+    background-repeat: no-repeat;
+    background-size: cover; /* garde le ratio original */  
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+   
+   
+}
+
+.index-hero-overlay{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #0f083396;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-index-titre{
+
+    max-width: 1000px;
+    width: 95%;
+    margin: 50px auto 20px;
+    padding: 10px 10px;
+    border-radius: 999px;
+    background-color: #f8f1c7;
+    box-shadow: 2px 2px 10px black;
+}
+
+@media (max-width: 700px){
+    .container-index-titre{
+       width: 98%;
+       border-radius: 0; 
+    }
+}
+
+.index-titre{
+    
+    text-align: center;
+    
+    
+    color: #ebcf33;
+    text-shadow: 2px 2px 5px black, -2px -2px 20px rgba(0, 0, 0, 0.308);
+    font-size: 30px;
+
+}
+
+@media (max-width: 700px){
+    .index-titre{
+        font-size: 25px;
+    }
+}
+
+.slider{
+    background-color: #E3C932;
+    
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+
+ 
+
+    
+}
+
+
+
+/**** index section formulaire ************************************/
+
+.section-formulaire{
+    background-color:#a8942570;
+ 
+    
+}
+
+
+
+/******* formulaire connexion  *****************************************/
+
+.container-form-connexion{
+    transform: translateY(-80px);
+    
+}
+
+
+
+#form-connexion{
+    max-width: 500px;
+    min-width: 320px;
+    background-color: #E3C932;
+    margin: 0px auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border: 2px solid #544f8e;
+
+}
+
+#form-connexion > h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+#form-connexion > input{
+    margin-bottom: 15px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.container-btn-connexion{
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+
+
+.btn-access-inscription{
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/********* formulaire inscription ***********************/
+
+
+.container-form-inscription{
+    transform: translateY(-80px);
+    
+}
+
+#form-inscription{
+    max-width: 500px;
+    min-width: 320px;
+    background-color: #E3C932;
+    margin: 0px auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border: 2px solid #544f8e;
+
+    position: relative;
+
+}
+
+#form-inscription > h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+#form-inscription > input{
+    margin-bottom: 15px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#form-inscription > fieldset{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.container-btn-inscription{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.btn-quite-inscription{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    padding: 5px 10px;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: #544f8e;
+    border-radius: 999px;
+    /* border: 2px solid black; */
+    border: none;
+
+    background-color: transparent;
+    cursor: pointer;
+}
+

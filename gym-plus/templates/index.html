@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym+ connexion</title>
+    <link rel="stylesheet" href="/templates/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-logo-text-nav">
+            
+            <img class="logo" src="/image/gym-plus-logo.png" alt="Logo">
+            <h5 class="header-h5">Votre gestionnaire d’activitées</h5>
+        </div>
+    </header>
+
+    <main class="main-index">
+
+        <section class="index-hero">
+            <div class="index-hero-overlay">
+                
+                <div class="container-index-titre">
+                    <h1 class="index-titre">offrez vous l’activité qui vous convient</h1>
+                </div>
+                
+                <div class="slider"></div>
+                
+                
+            </div>
+        </section>
+
+        <section class="section-formulaire">
+            <div class="container-form-connexion">
+                <form id="form-connexion">
+                    <h4 class="title-form-connexion">
+                        Connectez vous à Gym+
+                    </h4>
+
+                    <label for="connexion-courriel">Entrez votre courriel *</label>
+                    <input type="email" id="connexion-courriel" name="courriel" required>
+                    
+                    <label for="connexion-password">Entrez votre mot de passe *</label>
+                    <input type="password" id="connexion-password" name="password" required>
+                    <div class="container-btn-connexion">
+                        <button class="btn-annulez-connexion btn-standard" type="button">Annuler</button>
+                        <button class="btn-accedez-connexion btn-standard" type="submit">Accéder</button>
+                    </div>
+                    <button class="btn-access-inscription" type="button">Pas encore de compte? Inscrivez-vous</button>
+                    
+                </form>
+            </div>
+            
+            <div class="container-form-inscription cache">
+                <form id="form-inscription">
+                    <h4 class="title-form-inscription">
+                        Inscrivez vous à Gym+
+                    </h4>
+                    
+
+                   
+                    <label for="inscription-prenom">Entrez votre prenom *</label>
+                    <input type="text" id="inscription-prenom" name="prenom" required> 
+                    
+                    <label for="inscription-nom">Entrez votre nom *</label>             
+                    <input type="text" id="inscription-nom" name="nom" required>
+                                        
+                    <label for="inscription-naissance">Entrez votre date de naissance *</label>
+                    <input type="date" id="inscription-naissance" name="naissance" required>
+                    
+                    <label for="inscription-phone">Entrez votre numéro de téléphone *</label>
+                    <input type="tel" id="inscription-phone" name="phone" required>
+                    
+                    <fieldset>
+                        <legend>Membre du gym? *</legend>
+
+                        <input type="radio" id="membre-oui" name="membre-gym" value="oui" required>
+                        <label for="membre-oui">Oui</label>
+
+                        <input type="radio" id="membre-non" name="membre-gym" value="non" required>
+                        <label for="membre-non">Non</label>
+                    </fieldset>
+                                       
+                    <!-- ne pas mettre required -->
+                    <label for="inscription-numero-membre">Entrez votre numéro de membre </label>
+                    <input type="text" id="inscription-numero-membre" name="numero-membre">
+                    
+                    <label for="inscription-courriel">Entrez votre courriel *</label>
+                    <input type="email" id="inscription-courriel" name="courriel" required>
+                    
+                    <label for="inscription-password">Choisissez un mot de passe *</label>
+                    <p class="inscription-naissance-p">(Doit contenir au minimum 10 caractère, au moins 1 majuscule, 1 chiffre et un caractère spécial)</p>
+                    <input type="password" id="inscription-password" name="password" required>
+                    
+                    <label for="inscription-verify-password">confirmez votre mot de passe *</label>
+                    <input type="password" id="inscription-verify-password" name="verify-password" required>
+
+                    <div class="container-btn-inscription">
+                        <button class="btn-annulez-inscription btn-standard" type="button">annuler</button>
+                        <button class="btn-validez-inscription btn-standard" type="submit">Valider</button>
+                    </div>
+                    
+                    <button class="btn-quite-inscription" type="button">X</button>
+                
+                </form>
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="/templates/index.js"></script>
+</body>
+</html>
