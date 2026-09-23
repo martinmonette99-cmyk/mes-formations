@@ -91,7 +91,7 @@ header{
 /********* hero section  **************************************/
 
 .index-hero{
-    background-image: url(/image/img-gym-bg-index.png);
+    background-image: url(../image/img-gym-bg-index.png);
     width: 100%;
     height: 700px;
     display: flow-root;
