@@ -94,7 +94,8 @@ header{
     background-image: url(../image/img-gym-bg-index.png);
     width: 100%;
     height: 700px;
-    display: flow-root;
+    display: flow-root; /* regle le problème où margin-top pouvait « sortir » 
+    du parent et donner l'impression qu'un espace apparaissait entre le header et le hero.*/
     background-repeat: no-repeat;
     background-size: cover; /* garde le ratio original */  
     background-position: center;
@@ -106,6 +107,34 @@ header{
    
 }
 
+@media (max-width: 900px){
+    .index-hero{
+        width: 100%;
+        height: 600px;
+    }  
+}
+
+@media (max-width: 800px){
+    .index-hero{
+        width: 100%;
+        height: 550px;
+    }  
+}
+
+@media (max-width: 600px){
+    .index-hero{
+        width: 100%;
+        height: 500px;
+    }  
+}
+
+@media (max-width: 500px){
+    .index-hero{
+        width: 100%;
+        height: 550px;
+    }  
+}
+
 .index-hero-overlay{
 
     position: absolute;
@@ -114,7 +143,7 @@ header{
     right: 0;
     bottom: 0;
 
-    background-color: #0f083396;
+    background-color: #0f083360;
     
     display: flex;
     flex-direction: column;
@@ -163,9 +192,17 @@ header{
     max-width: 700px;
     aspect-ratio: 16 / 9;
 
- 
+}
 
-    
+@media (max-width: 1300px){
+    .slider{
+        width: 70%;
+    }  
+}
+@media (max-width: 500px){
+    .slider{
+        width: 85%;
+    }  
 }
 
 
