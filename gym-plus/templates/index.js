@@ -1,3 +1,41 @@
+/**********gsap */
+
+const timeline = gsap.timeline({repeat: -1});
+
+timeline.to(".slide-1", {
+    opacity: 0,
+    duration: 2,
+    delay: 3
+});
+
+timeline.to(".slide-2", {
+    opacity: 1,
+    duration: 2
+}, "<");
+
+timeline.to(".slide-2", {
+    opacity: 0,
+    duration: 2,
+    delay: 3
+});
+
+timeline.to(".slide-3", {
+    opacity: 1,
+    duration: 2
+}, "<");
+
+timeline.to(".slide-3", {
+    opacity: 0,
+    duration: 2,
+    delay: 3
+});
+
+timeline.to(".slide-1", {
+    opacity: 1,
+    duration: 2
+}, "<");
+
+
 
 
 /******* fonction de reset de l'erreur d'input **********/
