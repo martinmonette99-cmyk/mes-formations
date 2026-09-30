@@ -31,7 +31,8 @@
 header{
     width: 100%;
     height: 50px;
-    background-color: #E3C932;
+    /* background-color: #E3C932; */
+    background-color: #fae954;
 }
 
 .container-logo-text-nav{
@@ -88,10 +89,30 @@ header{
    } 
 }
 
+.navbar{
+    position: absolute;
+    right: 0;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+
+
+}
+
+.nav-ul-usager li{
+    list-style: none;
+}
+
+.btn-deconnexion{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+
 /********* hero section  **************************************/
 
 .index-hero{
-    background-image: url(../image/img-gym-bg-index.png);
+    background-image: url(image/img-gym-bg-index.png);
     width: 100%;
     height: 700px;
     display: flow-root; /* regle le problème où margin-top pouvait « sortir » 
@@ -222,15 +243,15 @@ header{
 }
 
 .slide-1{
-    background-image: url(../image/img-slider-1.png);
+    background-image: url(image/img-slider-1.png);
     opacity: 1;
 }
 .slide-2{
-    background-image: url(../image/img-slider-2.png);
+    background-image: url(image/img-slider-2.png);
     opacity: 0;
 }
 .slide-3{
-    background-image: url(../image/img-slider-3.png);
+    background-image: url(image/img-slider-3.png);
     opacity: 0;
 }
 
@@ -273,7 +294,7 @@ header{
 #form-connexion{
     max-width: 500px;
     min-width: 320px;
-    background-color: #E3C932;
+    background-color: #e4d233;
     margin: 0px auto 0 auto;
     padding: 30px;
     border-radius: 10px;
@@ -327,7 +348,7 @@ header{
 #form-inscription{
     max-width: 500px;
     min-width: 320px;
-    background-color: #E3C932;
+     background-color: #e4d233;
     margin: 0px auto 0 auto;
     padding: 30px;
     border-radius: 10px;

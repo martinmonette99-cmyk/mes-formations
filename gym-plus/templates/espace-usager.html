@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>espace-usager</title>
+    
+    <!-- Pour référencer static avec Flask : -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+     <header>
+        <div class="container-logo-text-nav">
+    
+        <img class="logo"
+            src="{{ url_for('static', filename='image/gym-plus-logo.png') }}"
+            alt="Logo"
+>
+            <h5 class="header-h5">Votre gestionnaire d’activitées</h5>
+
+            <!-- <button type="button" class="btn-deconnexion">Déconnexion</button> -->
+            <nav class="navbar">
+                <ul class="nav-ul-usager">
+                    <li><button type="button" class="btn-deconnexion">Déconnexion</button></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+        <h1 class="titre-espace-usager">Espace usager</h1>
+        <p class="p-bonjour-usager"></p>
+
+        <h4 class="titre-show-stat-usager">Voici vos informations</h4>
+
+
+        
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Espace usager</h1>
+    <p>Bienvenue dans votre espace Gym+</p>
+
+    <button type="button" class="btn-deconnexion">Déconnexion</button>
+     -->
+   
+    <!-- Pour référencer static avec Flask : -->
+    <script src="{{ url_for('static', filename='espace-usager.js') }}"></script>
+</body>
+</html>

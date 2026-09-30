@@ -124,7 +124,6 @@ Lorsque l'utilisateur clique sur **S'inscrire** :
 1.  Gym+ vérifie les champs que le frontend peut valider.
 2.  Si une erreur est trouvée :
     -   l'inscription est arrêtée;
-    -   le champ concerné passe en rouge;
     -   le message d'erreur est affiché directement près de ce champ;
     -   une seule erreur est présentée à la fois.
 3.  Si les validations frontend réussissent :
