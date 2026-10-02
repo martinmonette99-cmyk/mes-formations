@@ -257,5 +257,97 @@ def deconnexion():
     }
 
 
+@app.route("/api/usager", methods=["GET"])
+def info_usager():
+
+    # 1. Vérifier qu'un usager est connecté
+    if "usager_id" not in session:
+        return {
+            "succes": False,
+            "message": "Usager non connecté."
+        }, 401
+
+    # 2. Récupérer son id depuis la session
+    usager_id = session["usager_id"]
+
+    # 3. Ouvrir la base de données
+    connexion = sqlite3.connect("gym_plus.db")
+    connexion.row_factory = sqlite3.Row
+
+    # 4. Chercher cet usager
+    usager = connexion.execute("""
+        SELECT id, prenom, nom, courriel, telephone, membre_gym, numero_membre
+        FROM usagers
+        WHERE id = ?
+    """, (usager_id,)).fetchone()
+
+    connexion.close()
+
+    # 5. Sécurité au cas où l'usager n'existerait plus dans la DB
+    if usager is None:
+        return {
+            "succes": False,
+            "message": "Usager introuvable."
+        }, 404
+
+    # 6. Envoyer les informations au JavaScript
+    return {
+        "succes": True,
+        "usager": {
+            "id": usager["id"],
+            "prenom": usager["prenom"],
+            "nom": usager["nom"],
+            "courriel": usager["courriel"],
+            "telephone": usager["telephone"],
+            "membre_gym": usager["membre_gym"],
+            "numero_membre": usager["numero_membre"]
+        }
+    }
+
+@app.route("/api/mes-reservations", methods=["GET"])
+def mes_reservations():
+
+    # Vérifie si un usager est connecté
+    if "usager_id" not in session:
+        return {
+            "succes": False,
+            "message": "Usager non connecté."
+        }, 401
+
+    usager_id = session["usager_id"]
+
+    connexion = sqlite3.connect("gym_plus.db")
+    connexion.row_factory = sqlite3.Row
+
+    reservations = connexion.execute("""
+        SELECT
+            reservations.id AS reservation_id,
+            reservations.date_reservation,
+            activites.nom,
+            activites.jour,
+            activites.heure_debut,
+            activites.heure_fin,
+            activites.lieu,
+            activites.date_debut,
+            activites.date_fin
+
+        FROM reservations
+
+        JOIN activites
+            ON reservations.activite_id = activites.id
+
+        WHERE reservations.usager_id = ?
+
+        ORDER BY activites.date_debut
+    """, (usager_id,)).fetchall()
+
+    connexion.close()
+
+    return {
+        "succes": True,
+        "reservations": [dict(reservation) for reservation in reservations]
+    }
+
+
 if __name__ == "__main__":
     app.run(debug=True)
