@@ -1,4 +1,7 @@
-// http://127.0.0.1:5000/
+//  http://127.0.0.1:5000/
+//  http://127.0.0.1:5000/espace-usager
+//  http://127.0.0.1:5000/api/usager
+
 
 
 // ============================================================================
@@ -420,12 +423,13 @@ function verifieSubmitConnexion(event) {
     })
     .then(function (donnees) {
         if (donnees.succes === false) {
-        erreurConnexion.textContent = donnees.message;
-        erreurConnexion.classList.remove("cache");
-        btnAccedezConnexion.disabled = false;
+            erreurConnexion.textContent = donnees.message;
+            erreurConnexion.classList.remove("cache");
+            btnAccedezConnexion.disabled = false;
         } 
         else {
-        console.log("Connexion acceptée");
+            submitconnexion.reset();
+            window.location.href = donnees.redirect;
         }
     })
     .catch(function (erreur) {
@@ -467,4 +471,93 @@ btnQuiteInscription.addEventListener("click", toggleConnexionInscription);
 function toggleConnexionInscription() {
     formConnexion.classList.toggle("cache");
     formInscription.classList.toggle("cache");
+}
+
+
+/********* Navigation de l'usager connecté *********/
+
+function afficheLienEspaceUsager() {
+
+    fetch("/api/usager")
+    .then(function(response) {
+
+        if (!response.ok) {
+            return null;
+        }
+
+        return response.json();
+    })
+    .then(function(donnees) {
+        console.log(donnees);
+        if (donnees === null || donnees.succes !== true) {
+            return;
+        }
+
+          // Si JavaScript arrive ici, Flask a confirmé
+          // que l'usager possède une session valide.
+
+        submitconnexion.reset();
+
+        btnAccedezConnexion.disabled = true;
+
+
+        const navUl = document.querySelector(".nav-ul-index");
+
+        // Évite de créer deux fois le même lien.
+        if (navUl.querySelector(".lien-espace-usager")) {
+            return;
+        }
+
+        const li = document.createElement("li");
+        const lien = document.createElement("a");
+
+        lien.href = "/espace-usager";
+        lien.textContent = "Mon espace";
+        lien.classList.add("lien-espace-usager");
+
+        li.append(lien);
+        navUl.append(li);
+
+            // Création du bouton Déconnexion
+        const liDeconnexion = document.createElement("li");
+        const btnDeconnexion = document.createElement("button");
+
+        btnDeconnexion.type = "button";
+        btnDeconnexion.textContent = "Déconnexion";
+        btnDeconnexion.classList.add("btn-deconnexion-index");
+
+        liDeconnexion.append(btnDeconnexion);
+        navUl.append(liDeconnexion);
+
+        // Événement du bouton
+        btnDeconnexion.addEventListener("click", deconnexionIndex);
+    })
+    .catch(function(erreur) {
+        console.error("Vérification de la connexion :", erreur);
+    });
+}
+
+window.addEventListener("pageshow", function () {
+    afficheLienEspaceUsager();
+});
+
+
+function deconnexionIndex() {
+
+    fetch("/deconnexion", {
+        method: "POST"
+    })
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (donnees) {
+
+        if (donnees.succes === true) {
+            window.location.href = "/";
+        }
+
+    })
+    .catch(function (erreur) {
+        console.error("Erreur de déconnexion :", erreur);
+    });
 }

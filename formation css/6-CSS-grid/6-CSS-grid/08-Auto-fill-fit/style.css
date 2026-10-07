@@ -20,7 +20,7 @@ body {
   
   /* auto-fill */
   /* crée une grille avec le nombre exact d'éléments + le reste de la grille invisible */ 
-  grid-template-columns: repeat(auto-fit,100px);
+  grid-template-columns: repeat(auto-fill,100px);
 }
 .item {
   border: 1px solid #222;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestionnaire de tâche</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-header-presentation">
+            <p class="header-presentation">Taskio</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-hero-section">
+            <div class="container-hero-section-titre-sous-titre">
+                <h1 class="hero-section-titre">Votre gestionnaire de tâches</h1>
+                <p class="hero-section-sous-titre">Gérez vos tâches efficacement</p>
+            </div>
+        </section>
+        
+        
+        <section class="section-formulaire">
+            <div class="container-form">
+                <form id="index-form">
+                    <label for="nouvelle-tache">Entrez votre nouvelle tâche</label>
+                    <input type="text" id="nouvelle-tache" maxlength="50" name="tache" required>
+                    <fieldset>
+                        <legend>Priorité:</legend>
+
+                        <input type="radio" id="priorite-basse" name="priorite" value="basse" required>
+                        <label for="priorite-basse">basse</label>
+
+                        <input type="radio" id="priorite-moyenne" name="priorite" value="moyenne" required>
+                        <label for="priorite-moyenne">moyenne</label>
+                    
+                        <input type="radio" id="priorite-haute" name="priorite" value="haute" required>
+                        <label for="priorite-haute">haute</label>
+                    </fieldset>
+                    <div class="container-form-button">
+                        <button class="annuler btn-standard" type="reset">Annuler</button>
+                        <button class="enregistrer btn-standard" type="submit">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section-mes-taches">
+
+            <h2>Mes tâches</h2>
+
+            <!-- Boutons de filtrage -->
+            <div class="container-filtre-taches">
+
+                <button type="button" class="btn-toutes btn-filter-on">
+                    Toutes
+                </button>
+
+                <button type="button" class="btn-actives btn-filter-on">
+                    Actives
+                </button>
+
+                <button type="button" class="btn-terminees btn-filter-on">
+                    Terminées
+                </button>
+
+            </div>
+
+            <!-- Conteneur qui recevra les tâches -->
+            <div class="container-liste-taches">
+
+                <!-- Les tâches seront créées ici avec JavaScript -->
+
+            </div>
+
+            <!-- Suppression globale -->
+            <button type="button" class="btn-supprimer-terminees">
+                Supprimer les tâches terminées
+            </button>
+
+        </section>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
+

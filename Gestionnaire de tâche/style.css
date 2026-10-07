@@ -1,0 +1,286 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-standard{
+    background-color: brown;
+    color: white;
+    
+    width: 100px;
+    padding: 10px 10px;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+.btn-filter-on{
+    background-color: rgb(243, 227, 227);
+}
+
+/********* header *********************************************/
+header{
+    width: 100%;
+    height: 50px;
+    background-color: brown;
+    color: aliceblue;
+}
+
+.container-header-presentation{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-presentation{
+    font-size: 30px;
+}
+
+
+/*************** hero-section **********************************/
+
+.section-hero-section{
+
+    background-color: rgb(218, 217, 217);
+    
+}
+
+.container-hero-section-titre-sous-titre{
+    min-width: 450px;
+    width: 35vw;
+    margin: 0px auto 0px auto;
+    padding: 20px;
+
+    background-color: brown;
+    color: rgb(255, 240, 240);
+    border-radius: 20px;
+    border: 10px solid white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-wrap: balance;
+    text-align: center;
+
+}
+
+@media (max-width: 500px){
+    .container-hero-section-titre-sous-titre{
+        min-width: 0;
+        width: 100vw; 
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-radius: 0;
+
+    }
+}
+
+.hero-section-sous-titre{
+    font-size: 20px;
+}
+
+
+/**** section formulaire *************************/
+
+.section-formulaire{
+    background-color: brown;
+    padding: 40px 0;
+}
+
+.container-form{
+   
+   min-width: 450px;
+   width: 35vw;
+   margin: 0 auto;
+   padding: 30px;
+   
+   background-color: rgb(218, 217, 217);
+   
+   border-radius: 20px;
+   border: 10px solid white;
+}
+
+@media (max-width: 500px){
+    .container-form{
+        min-width: 0;
+        width: 100vw;
+        border-radius: 0px;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+    }
+}
+
+#index-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* selectioner les attributs */ 
+input[type="text"] {
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+fieldset{
+    margin-bottom: 10px;
+    
+    
+}
+
+.container-form-button{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media (max-width: 500px){
+    .container-form-button{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/******************** section-mes-taches *************************************/
+
+
+/********** section boutons filtre tâches *****************************/
+
+.section-mes-taches{
+    background-color: rgb(218, 217, 217);
+    padding-bottom: 100px;
+}
+
+h2{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.container-filtre-taches{
+    margin: 0 auto;
+    width: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.container-filtre-taches > button{
+   
+    padding: 15px 40px;
+    min-width: 200px;
+
+    background-color: white;
+    border: 2px solid brown;
+    color: rgb(114, 2, 2);
+
+    font-size: 1rem;
+    
+}
+
+.container-filtre-taches > button:hover{
+    background-color: rgb(243, 227, 227);
+}
+
+.container-filtre-taches > button:active{
+    background-color: rgb(223, 98, 98);
+}
+
+
+
+
+/********************* section affichage des taches  ************************************/
+
+.container-liste-taches{
+    max-width: 1500px;
+    margin: 30px auto;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+
+    grid-template-columns: repeat(auto-fill, 320px);
+    grid-template-rows: fit-content;
+    
+    justify-content: center;
+    justify-items: center;
+
+    
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+
+    background-color:rgb(245, 240, 237);
+    border: 1px solid brown;
+    border-radius: 10px;
+
+    width: 320px;
+    padding: 20px;
+    gap: 10px;
+    color: rgb(114, 2, 2);
+}
+
+.card-titre {
+    line-height: 1.2;
+    min-height: 2.4em;
+    overflow-wrap: break-word; /* un long mot est brisé pour passer à la ligne
+    /* text-wrap: balance; */
+}
+
+.container-card-btn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-card{
+    background-color: brown;
+    color: white;
+    padding: 5px 15px;
+    min-width: 100px;
+    border-radius: 5px;
+}
+
+
+
+
+.btn-supprimer-terminees{
+    display: block;
+    padding: 15px 40px;
+    min-width: 200px;
+    margin: 0 auto;
+
+    background-color: white;
+    border: 2px solid brown;
+    color: rgb(114, 2, 2);
+
+    font-size: 1rem;
+}
+
+.btn-supprimer-terminees:hover{
+    background-color: rgb(243, 227, 227);
+}
+
+.btn-supprimer-terminees:active{
+    background-color: rgb(223, 98, 98);
+}

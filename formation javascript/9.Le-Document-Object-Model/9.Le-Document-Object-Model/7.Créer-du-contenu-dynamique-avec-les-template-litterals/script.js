@@ -72,6 +72,26 @@
       )
 
 
+/**** pour positionner dans le html l'élément créé ***/ 
+
+/*      // Je crée mon élément
+const titre = document.createElement("h2");
+
+// Je lui donne du contenu
+titre.textContent = "Nos activités";
+
+// Je sélectionne mon point de référence dans le HTML
+const container = document.querySelector(".container-activites");
+
+// J'insère mon h2 juste avant ce container
+
+container.insertAdjacentElement("beforebegin", titre);  avant
+apresTitre.insertAdjacentElement("afterend", div);   après
+
+*/
+
+
+
 /* 
     En résumé, les templates litterals peuvent être utiles si on a envie de créer de gros morceaux de codes.
     

@@ -2,6 +2,9 @@
 
 // http://127.0.0.1:5000/api/usager
 
+
+/********* Déconnection *************************/
+
 const btnDeconnexion = document.querySelector(".btn-deconnexion");
 btnDeconnexion.addEventListener("click", deconnexion);
 
@@ -27,7 +30,7 @@ function deconnexion() {
 
 }
 
-
+/************* Affiche les info de l'usager ***********************************/
 const BonjourUsager = document.querySelector(".p-bonjour-usager");
 
 const statUsagerNom = document.querySelector(".stat-usager-nom");
@@ -61,6 +64,8 @@ function afficheInfoUsager(){
 afficheInfoUsager();
 
 
+
+/********* Affiche les réservations de l'usager ****************************/
 function afficheMesReservations() {
 
     fetch("/api/mes-reservations")
@@ -70,13 +75,74 @@ function afficheMesReservations() {
     .then(function (donnees) {
        console.log(donnees);
        console.log(donnees.reservations);
-       console.log(donnees.reservations[0].date_debut);
+
+        donnees.reservations.forEach(element => {
+            
+            createCarteReservation(element);
+        });
     });
-
-    
-
-
 }
 afficheMesReservations();
 
 
+
+function createCarteReservation(donneesReservation){
+        const apresTitre = document.querySelector(".section-mes-reservation");
+
+            const div = document.createElement("div");
+            div.classList.add("container-mes-réservations")
+
+            const divContent = 
+            `
+            <h3 class="nom-reservation"></h3>
+            <p class="lieu-reservation"></p>
+            <p class="date-reservation"></p>
+            <p class="jour-reservation"></p>
+            <p class="date-debut-reservation"></p>
+            <p class="date-fin-reservation"></p>
+            <p class="heure-debut-reservation"></p>
+            <p class="heure-fin-reservation"></p>
+            `
+
+            div.innerHTML = divContent;
+            div.querySelector(".nom-reservation").textContent = `${donneesReservation.nom}`;
+            div.querySelector(".lieu-reservation").textContent = `Lieu: ${donneesReservation.lieu}`;
+            div.querySelector(".date-reservation").textContent = `Date de réservation: ${formaterDate(donneesReservation.date_reservation)}`;
+            div.querySelector(".jour-reservation").textContent = `Jour de l'activité: ${donneesReservation.jour}`;
+            div.querySelector(".date-debut-reservation").textContent = `Commence le ${formaterDate(donneesReservation.date_debut)}`;
+            div.querySelector(".date-fin-reservation").textContent = `Se termine le ${formaterDate(donneesReservation.date_fin)}`;
+            div.querySelector(".heure-debut-reservation").textContent = `De ${donneesReservation.heure_debut}h`;
+            div.querySelector(".heure-fin-reservation").textContent = `À ${donneesReservation.heure_fin}h`;
+
+            apresTitre.appendChild(div);    
+}
+
+
+/*********** Change l'affichage de la date *********************************/
+function formaterDate(dateBrute) {
+
+    const date = new Date(dateBrute.replace(" ", "T"));
+
+    return new Intl.DateTimeFormat("fr-CA", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    }).format(date);
+
+/*ÉTAPE 1 — ARGUMENT REÇU
+"2026-10-02 00:58:20"
+
+ÉTAPE 2 — REPLACE()
+"2026-10-02T00:58:20"
+
+ÉTAPE 3 — NEW DATE()
+Un objet JavaScript Date est créé.
+
+ÉTAPE 4 — INTL.DATETIMEFORMAT()
+Les règles de présentation sont définies : français canadien, jour numérique, mois en lettres et année numérique.
+
+ÉTAPE 5 — .FORMAT(DATE)
+2 octobre 2026
+Résultat retourné sous forme de chaîne de caractères.*/
+
+}

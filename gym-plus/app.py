@@ -236,14 +236,15 @@ def connexion_usager():
     return {
         "succes": True,
         "message": "Connexion réussie.",
-        "role": usager["role"]
+        "role": usager["role"],
+        "redirect": "/espace-usager"
     }
 
 @app.route("/espace-usager")
 def espace_usager():
 
-    # if "usager_id" not in session:
-    #     return redirect("/")
+    if "usager_id" not in session:
+        return redirect("/")
 
     return render_template("espace-usager.html")
 
