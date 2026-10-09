@@ -34,19 +34,63 @@ const taches = [
 
 ]
 
-
-const containerListeTaches = document.querySelector(".container-liste-taches");
+const submitNewTache = document.querySelector("#index-form");
 
 const filterAll = document.querySelector(".btn-toutes");
 const filterActive = document.querySelector(".btn-actives");
 const filtertermine = document.querySelector(".btn-terminees");
 
-const submitNewTache = document.querySelector("#index-form");
+const containerListeTaches = document.querySelector(".container-liste-taches");
+
+const btnCardActiver = document.querySelector(".btn-activer");
+const btnCardTerminer = document.querySelector(".btn-terminer");
+const btnCardSupprimer = document.querySelector(".btn-supprimer");
+
+containerListeTaches.addEventListener("click", gererClicSuppression);
+
+
+
+
+
+/******************* formulaire créer tâche ******************************/
+
+submitNewTache.addEventListener("submit", createTache);
+
+function createTache(event){
+    event.preventDefault();
+
+    const titreNewTache =  document.querySelector("#nouvelle-tache");
+    
+    // demande celui qui est actuellement coché
+    const prioriteNewTache = document.querySelector('input[name="priorite"]:checked');
+
+    
+    let idHigh = 0;
+
+    taches.forEach(el => {
+        if(el.id >= idHigh){
+            idHigh = el.id;
+        }
+    });
+    idHigh++
+
+    const donneeNewtache = {
+        id: idHigh,
+        titre: titreNewTache.value,
+        priorite: prioriteNewTache.value,
+        statut: "active"
+    }
+
+    taches.push(donneeNewtache);
+    console.log(taches);
+    AfficheTache(taches);
+}
+
+AfficheTache(taches);
 
 
 
 /******** affiche et crée les tâches du tableau  ***************************** */
-
 
 function AfficheTache(array){
 
@@ -58,6 +102,7 @@ function AfficheTache(array){
     let cardContent;
     const card = document.createElement("div");
     card.classList.add("card");
+    card.dataset.id = tache.id;
     
     if(tache.statut === "active"){ 
         cardContent = `
@@ -94,7 +139,7 @@ function AfficheTache(array){
 
 }
 
-AfficheTache(taches);
+
 
 
 
@@ -139,38 +184,26 @@ function showtermine(){
     AfficheTache(tachesterminees);
 }
 
-/******************* */
 
-submitNewTache.addEventListener("submit", createTache);
 
-function createTache(event){
-    event.preventDefault();
 
-    const titreNewTache =  document.querySelector("#nouvelle-tache");
-    
-    // demande celui qui est actuellement coché
-    const prioriteNewTache = document.querySelector('input[name="priorite"]:checked');
+function gererClicSuppression(event) {
 
-    
-    let idHigh = 0;
+    const bouton = event.target.closest(".btn-supprimer");
 
-    taches.forEach(el => {
-        if(el.id >= idHigh){
-            idHigh = el.id;
-        }
-    });
-    idHigh++
-
-    const donneeNewtache = {
-        id: idHigh,
-        titre: titreNewTache.value,
-        priorite: prioriteNewTache.value,
-        statut: "active"
+    if (!bouton || !containerListeTaches.contains(bouton)) {
+        return;
     }
 
-    taches.push(donneeNewtache);
-    console.log(taches);
-    AfficheTache(taches);
+    const card = bouton.closest(".card");
+
+    const id = Number(card.dataset.id);
+
+    supprimerTache(id);
 }
+
+
+
+
 
 

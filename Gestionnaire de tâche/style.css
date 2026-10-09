@@ -196,11 +196,11 @@ h2{
 }
 
 .container-filtre-taches > button:hover{
-    background-color: rgb(243, 227, 227);
+    background-color: rgb(243, 237, 237);
 }
 
 .container-filtre-taches > button:active{
-    background-color: rgb(223, 98, 98);
+    background-color: rgb(252, 224, 224);
 }
 
 
